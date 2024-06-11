@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Avatares List</title>
+    <style>
+        .avatar-img {
+            width: 80px; /* Ajuste para o tamanho desejado */
+            height: 80px; /* Mantém a imagem como um círculo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Avatares List</h1>
+        <div class="row">
+            {% for avatar in avatares %}
+                <div class="col-md-3 col-sm-6 text-center mb-4">
+                    <img src="{{ avatar.photoUrl }}" class="rounded-circle avatar-img" alt="avatar">
+                    <h5 class="mt-2">{{ avatar.name }}</h5>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
